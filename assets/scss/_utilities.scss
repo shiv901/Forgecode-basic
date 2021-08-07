@@ -1,0 +1,140 @@
+// Variables
+$primary-color : #23F2B0;
+$dark-color: #0A1519;
+$grey-color: #F6F6F6;
+$bg-dark: linear-gradient(121deg, hsla(201, 47%, 10%, 1) 0%, hsla(221, 60%, 17%, 1) 100%, hsla(232, 32%, 39%, 1) 100%) 0% 0% no-repeat padding-box;
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-darker{background: $bg-dark;}
+.bg-grey{background: $grey-color;}
+.text-prime{color: $primary-color;}
+.font-large{font-size: large;}
+.font-small{font-size: small;}
+.font-weight-normal{font-weight: 500;}
+.font-weight-bold{font-weight: bold;}
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+ul li{
+  list-style-type: none;
+}
+
+// MAagin and paddings
+
+.p{
+  &y-10{padding-block: 5rem;}
+  &t-10{padding-top: 5rem;}
+  &b-10{padding-bottom: 5rem;}
+  &l-10{padding-left: 5rem;}
+  &r-10{padding-right: 5rem;}
+
+  &y-12{padding-block: 7rem;}
+  &t-12{padding-top: 7rem;}
+  &b-12{padding-bottom: 7rem;}
+  &l-12{padding-left: 7rem;}
+  &r-12{padding-right: 7rem;}
+  
+}
+
+.m{
+  &y-10{margin-block: 5rem;}
+  &t-10{margin-top: 5rem;}
+  &b-10{margin-bottom: 5rem;}
+  &l-10{margin-left: 5rem;}
+  &r-10{margin-right: 5rem;}
+
+  &y-12{margin-block: 7rem;}
+  &t-12{margin-top: 7rem;}
+  &b-12{margin-bottom: 7rem;}
+  &l-12{margin-left: 7rem;}
+  &r-12{margin-right: 7rem;}
+}
+
+
+.btn-dark-prime{
+  background: $dark-color;
+  color: $primary-color;
+  padding: .6rem 2rem;
+  border-radius: 4px;
+}
+
+.btn-forge-hollow{
+  text-transform: uppercase;
+  border: 1px solid $primary-color;
+  transition: all 0.3s ease-in-out;
+  color: $primary-color;
+  padding-inline: 2rem;
+
+  &:hover{
+    background-color: $primary-color;
+    // color: #fff;
+  }
+}
+
+.more-btn{
+  $color : #333;
+  position: relative;
+  color: $color;
+  text-transform: uppercase;
+  i{transition: all 0.2s;}
+  &::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background: $color;
+    height: 2px;
+    width: 0px;
+    transition: all 0.2s;
+  } 
+  &:hover{
+    color: $color;
+    i{margin-left: 0.5rem;}
+    &::before{width: 100%;}
+  }
+}
+.more-btn-light{
+  $color : #fff;
+  position: relative;
+  color: $color;
+  text-transform: uppercase;
+  i{transition: all 0.2s;}
+  &::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background: $color;
+    height: 2px;
+    width: 0px;
+    transition: all 0.2s;
+  } 
+  &:hover{
+    color: $color;
+    i{margin-left: 0.5rem;}
+    &::before{width: 100%;}
+  }
+}
+
+.section{
+  min-height: 100vh;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+}

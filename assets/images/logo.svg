@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="187.694" height="40.296" viewBox="0 0 187.694 40.296">
+  <g id="Group_151" data-name="Group 151" transform="translate(-301 -50)">
+    <g id="Group_57" data-name="Group 57" transform="translate(89.518 -298.771)">
+      <path id="Path_18" data-name="Path 18" d="M229.351,353.646l1.33-4.875h-8.206l-.761,2.792Z" fill="#fff"/>
+      <path id="Path_19" data-name="Path 19" d="M223.995,373.282l2.714-9.952-7.637-2.082-2.714,9.951-4.875-1.33v8.207l2.792.761-2.79,10.229h8.206l2.221-8.146,29.866,8.145V380.86l-27.783-7.577Z" fill="#fff"/>
+      <path id="Path_20" data-name="Path 20" d="M233.908,384.193l-1.329,4.874h8.206l.762-2.791Z" fill="#fff"/>
+      <path id="Path_21" data-name="Path 21" d="M236.55,374.508l7.637,2.084,2.715-9.953,4.877,1.33v-8.207L248.985,359l2.79-10.229h-8.206l-2.222,8.146-29.864-8.145v8.207l27.781,7.577Z" fill="#fff"/>
+    </g>
+    <text id="Forgecode" transform="translate(356.694 81)" fill="#23f2b0" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Forgecode</tspan></text>
+  </g>
+</svg>
