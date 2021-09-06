@@ -369,8 +369,16 @@ ul li {
   opacity: 1;
 }
 
+.scroll-down-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 #hire-us {
-  padding: 9rem 2rem;
+  padding: 15em 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -379,12 +387,12 @@ ul li {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   height: 4px;
-  width: 10%;
+  width: 20%;
   margin-inline: auto;
 }
 
 #hire-us a {
-  font-size: 5rem;
+  font-size: 8rem;
   color: #000;
   text-transform: uppercase;
   font-weight: 600;
@@ -403,20 +411,21 @@ ul li {
   bottom: 100%;
   left: 100%;
   right: 100%;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
   border-radius: 50%;
 }
 
 #hire-us a:hover {
   color: #23F2B0;
   opacity: 1;
+  letter-spacing: 3px;
 }
 
 #hire-us a:hover ~ hr {
   background-color: #23F2B0;
   opacity: 1;
-  width: 60%;
+  width: 70%;
 }
 
 #hire-us a:hover::after {
@@ -573,14 +582,9 @@ html {
   background: #555;
 }
 
-.card:hover {
-  -webkit-box-shadow: 0px 5px 12px black !important;
-          box-shadow: 0px 5px 12px black !important;
-}
-
 .no-bg-card {
-  -webkit-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .no-bg-card:hover {
