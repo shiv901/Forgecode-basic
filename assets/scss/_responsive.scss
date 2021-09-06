@@ -1,0 +1,21 @@
+@media screen and (max-width: 1400px) {
+  .landing-wrapper{
+    .landing-img{
+      img{max-width: 100%;}
+    }
+  }
+}
+
+@media screen and (max-width: 993px) {
+  .hero .landing-wrapper{
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr 2fr;
+    .landing-text{
+      grid-row: 2/3;
+    }
+    .landing-img{
+      grid-row: 3/4;
+      img{max-width: 100%;}
+    }
+  }
+}

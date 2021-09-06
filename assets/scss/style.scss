@@ -76,7 +76,7 @@
 
 
 .heading{
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 3.5vw, 4.3rem);
   font-weight: 700;
   margin-bottom: 3rem;
 }
@@ -86,7 +86,7 @@
 }
 
 .hero-text{
-  font-size: 5.5vw;
+  font-size: clamp(2rem,6vw, 6.5rem);
   font-weight: bold;
   line-height: 1.2;
 }
@@ -94,12 +94,21 @@
 .hero{
   padding-top: 0rem;
   color: #fff;
-  height: 100vh;
+  height: clamp(100vh, 100vh, 80rem);
   // di
-  .landing{
+  .landing-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+
+    .landing-text,
+    .landing-img{
+      grid-row: 1/3;
+      align-self: center;
+    }
     .landing-img{
       img{
-        max-width: 100%;
+        // max-width: 100%;
         height: auto;
         display: block;
       }
@@ -154,10 +163,12 @@
 #project-section{
   overflow-x: hidden;
   img{
-    max-height: 400px;
+    // max-height: 70%;
+    height: 60%;
     opacity: 0.1;
   }
   img.active{
+    height: auto;
     opacity: 1;
   }
 }
@@ -240,6 +251,9 @@ hr.prime{
 // Contact Section
 
 #contact-section{
+  .heading{
+    font-size: 3rem;
+  }
   ul li{
     font-size: 1.2rem;
     padding: 0.75rem 0;
@@ -393,3 +407,5 @@ html {
     background: #F6F6F6;
   }
 }
+
+@import 'responsive';

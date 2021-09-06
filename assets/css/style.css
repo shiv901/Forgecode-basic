@@ -284,7 +284,7 @@ ul li {
 }
 
 .heading {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 3.5vw, 4.3rem);
   font-weight: 700;
   margin-bottom: 3rem;
 }
@@ -295,7 +295,7 @@ ul li {
 }
 
 .hero-text {
-  font-size: 5.5vw;
+  font-size: clamp(2rem, 6vw, 6.5rem);
   font-weight: bold;
   line-height: 1.2;
 }
@@ -303,11 +303,29 @@ ul li {
 .hero {
   padding-top: 0rem;
   color: #fff;
-  height: 100vh;
+  height: clamp(100vh, 100vh, 80rem);
 }
 
-.hero .landing .landing-img img {
-  max-width: 100%;
+.hero .landing-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.hero .landing-wrapper .landing-text,
+.hero .landing-wrapper .landing-img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.hero .landing-wrapper .landing-img img {
   height: auto;
   display: block;
 }
@@ -361,11 +379,12 @@ ul li {
 }
 
 #project-section img {
-  max-height: 400px;
+  height: 60%;
   opacity: 0.1;
 }
 
 #project-section img.active {
+  height: auto;
   opacity: 1;
 }
 
@@ -446,6 +465,10 @@ hr.prime {
   background-color: #0A1519;
   border: 0;
   opacity: .5;
+}
+
+#contact-section .heading {
+  font-size: 3rem;
 }
 
 #contact-section ul li {
@@ -589,4 +612,32 @@ html {
 
 .no-bg-card:hover {
   background: #F6F6F6;
+}
+
+@media screen and (max-width: 1400px) {
+  .landing-wrapper .landing-img img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 993px) {
+  .hero .landing-wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 10% 1fr 2fr;
+        grid-template-rows: 10% 1fr 2fr;
+  }
+  .hero .landing-wrapper .landing-text {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .hero .landing-wrapper .landing-img {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  .hero .landing-wrapper .landing-img img {
+    max-width: 100%;
+  }
 }
